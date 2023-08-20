@@ -1461,7 +1461,7 @@ trait ValidatesAttributes
             $parameters = array_unique(array_merge($parameters, ['jpg', 'jpeg']));
         }
 
-        return $value->getPath() !== '' && in_array($value->guessExtension(), $parameters);
+        return $value->getPath() !== '' && in_array($value->guessClientExtension(), $parameters);
     }
 
     /**
